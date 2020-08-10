@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class H2 extends StatelessWidget {
   final String text;
@@ -27,8 +28,9 @@ class H2 extends StatelessWidget {
 class Bullet extends StatelessWidget {
   final String text;
   final int level;
+  final String link;
 
-  Bullet(this.text, {this.level = 0, Key key}) : super(key: key);
+  Bullet(this.text, {this.level = 0, this.link, Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,7 @@ class Bullet extends StatelessWidget {
       header: true,
       child: Container(
           padding: EdgeInsets.only(bottom: 16),
-          width: double.infinity,
+//          width: double.infinity,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -44,15 +46,23 @@ class Bullet extends StatelessWidget {
                 padding: EdgeInsets.only(left: 12.0 + level * 30, right: 12.0),
                 child: Text('-', style: TextStyle(fontSize: 34)),
               ),
-              Flexible(
-                  child: Text(this.text,
-                      style: TextStyle(
-                        fontSize: 34,
-                        fontFamily: 'Helvetica Neue',
-                        fontWeight: FontWeight.w300,
-                      ))),
+              link != null ? buildLink() : buildText(),
             ],
           )),
     );
   }
+
+  Widget buildLink() => FlatButton(
+        padding: EdgeInsets.all(0),
+        onPressed: () => launch(this.link),
+        child: buildText(color: Colors.cyan),
+      );
+
+  Widget buildText({Color color}) => Flexible(
+      child: Text(this.text,
+          style: TextStyle(
+              fontSize: 34,
+              fontFamily: 'Helvetica Neue',
+              fontWeight: FontWeight.w300,
+              color: color)));
 }

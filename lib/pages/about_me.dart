@@ -12,17 +12,32 @@ class AboutMePage extends StatelessWidget {
         children: <Widget>[
           H2('Who Am I'),
           Divider(),
-          Bullet('Weizhong Yang (weizhong.yang@cernece.com)'),
-          Bullet('👨🏻‍💻 iOS Developer at Taipei'),
-          Bullet('Working on Project 168'),
-          Bullet('iOS dev for 12 years. '
-              'MacOS dev for 15 years. '
-              'Flutter for 3 years'),
-          Bullet('Flutter GDE'),
-          Bullet('Built app products using Flutter in previous job'),
-          Bullet('Less Flutter after joining an ASR company'),
+          Row(
+            children: <Widget>[
+              Expanded(child: buildColumn()),
+              Expanded(child: Image.asset('images/zonble.png')),
+            ],
+          ),
         ],
       ),
+    );
+  }
+
+  Widget buildColumn() {
+    return Column(
+      children: <Widget>[
+        Bullet('Weizhong Yang (weizhong.yang@cernece.com)'),
+        Bullet('👨🏻‍💻 iOS Developer at Taipei'),
+        Bullet('Working on Project 168'),
+        Bullet('iOS dev for 12 years. '
+            'MacOS dev for 15 years. '
+            'Flutter for 3 years'),
+        Bullet('Flutter GDE',
+            link:
+                'https://developers.google.com/community/experts/directory/profile/profile-weizhong_yang'),
+        Bullet('Built app products using Flutter in previous job'),
+        Bullet('Less Flutter after joining an ASR company'),
+      ],
     );
   }
 }

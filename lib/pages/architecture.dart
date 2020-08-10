@@ -10,19 +10,18 @@ class Architecture extends StatelessWidget {
     return SimplePage(
       child: Column(
         children: <Widget>[
-          H2('Architecture- Flash for 21 Century'),
+          H2('Architecture'),
           Divider(),
+          Bullet('Like Flash for 21st Century'),
           Bullet('Flutter was born from Web technologies'),
           Bullet('It\'s like a simplified web browser'),
-          Padding(
-              padding: const EdgeInsets.only(left: 30.0),
-              child: Bullet('Renderer: Skia, as Chrome')),
-          Padding(
-              padding: const EdgeInsets.only(left: 30.0),
-              child: Bullet('Replace JavaScript with Dart')),
-          Padding(
-              padding: const EdgeInsets.only(left: 30.0),
-              child: Bullet('Replace DOM with Widgets')),
+          Bullet('Renderer: Skia, as Chrome', level: 1),
+          Bullet('Replace JavaScript with Dart', level: 1),
+          Bullet('Replace DOM with Widgets', level: 1),
+          Bullet('From the view of platform developers'),
+          Bullet('Flutter runs in an activity on Android', level: 1),
+          Bullet('Flutter runs in a view controller on iOS', level: 1),
+          Bullet('Flutter rendered in canvas on web', level: 1),
         ],
       ),
     );

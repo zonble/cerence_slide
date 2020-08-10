@@ -10,7 +10,11 @@ class SimplePage extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(30.0),
-        child: child,
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: child,
+        ),
       ),
     );
   }

@@ -14,10 +14,14 @@ class FlutterAndCerence extends StatelessWidget {
           Bullet('Flutter is much about GUI'),
           Bullet('It does not help our T-BOX products'),
           Bullet('ARK SDK cliets may use Flutter to build apps'),
-          Bullet('Competetors are supporting Flutter'),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Bullet('百度語音'),
+          Bullet('People are making Flutter plugins for voice services'),
+          Bullet('百度语音识别 (第三方)',
+              level: 1,
+              link: 'https://github.com/soragui/flutter_baidu_speech_plugin'),
+          Bullet(
+            '訊飛語音 TTS (第三方)',
+            level: 1,
+            link: 'https://github.com/fluttify-project/xftts_fluttify',
           ),
         ],
       ),
