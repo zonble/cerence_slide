@@ -1,7 +1,7 @@
-import 'package:cerence_slide/pages/page.dart';
 import 'package:flutter/material.dart';
 
 import '../styles.dart';
+import 'page.dart';
 
 class StateManagement extends StatelessWidget {
   @override
@@ -17,7 +17,8 @@ class StateManagement extends StatelessWidget {
         Bullet('MobiX...and so on', level: 1),
         Bullet('Difference with JavaScript Patterns'),
         Bullet('Dart has classes', level: 1),
-        Bullet('Sub-widget can look up for super widget in specific class', level: 1),
+        Bullet('Sub-widget can look up for super widget in specific class',
+            level: 1),
       ]),
     );
   }

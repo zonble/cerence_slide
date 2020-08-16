@@ -1,7 +1,7 @@
-import 'package:cerence_slide/pages/page.dart';
 import 'package:flutter/material.dart';
 
 import '../styles.dart';
+import 'page.dart';
 
 class FlutterAndCerence extends StatelessWidget {
   @override

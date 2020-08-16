@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../styles.dart';
@@ -13,6 +12,7 @@ class AboutMePage extends StatelessWidget {
           H2('Who Am I'),
           Divider(),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Expanded(child: buildColumn()),
               Expanded(child: Image.asset('images/zonble.png')),
