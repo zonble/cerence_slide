@@ -10,7 +10,6 @@ class FlutterAndCerence extends StatelessWidget {
       child: Column(
         children: <Widget>[
           H2('Flutter and Cerence'),
-          Divider(),
           Bullet('Flutter is much about GUI'),
           Bullet('It does not help our T-BOX products'),
           Bullet('ARK SDK cliets may use Flutter to build apps'),

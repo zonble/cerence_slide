@@ -10,7 +10,6 @@ class FirstGlance extends StatelessWidget {
       child: Column(
         children: <Widget>[
           H2('The First Glance'),
-          Divider(),
           Bullet('A cross-platform UI framework'),
           Bullet('📱 iOS/Android 💻 macOS/Windows/Web'),
           Bullet('App framework for a future OS - Fuchsia',

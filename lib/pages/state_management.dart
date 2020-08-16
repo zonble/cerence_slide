@@ -9,7 +9,6 @@ class StateManagement extends StatelessWidget {
     return SimplePage(
       child: Column(children: <Widget>[
         H2('State Management'),
-        Divider(),
         Bullet('Patterns and Packages'),
         Bullet('Redux', level: 1),
         Bullet('Provider', level: 1),

@@ -11,7 +11,6 @@ class Architecture extends StatelessWidget {
       child: Column(
         children: <Widget>[
           H2('Architecture'),
-          Divider(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[

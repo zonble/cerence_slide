@@ -13,7 +13,7 @@ class H2 extends StatelessWidget {
       header: true,
       child: Container(
           width: double.infinity,
-          padding: EdgeInsets.only(top: 30, bottom: 10),
+          padding: EdgeInsets.only(top: 30, bottom: 20),
           child: Text(this.text,
               style: TextStyle(
                 fontSize: 66,

@@ -33,7 +33,6 @@ class _WhoUsesFlutterState extends State<WhoUsesFlutter> {
       child: Column(
         children: <Widget>[
           H2('Who Uses Flutter?'),
-          Divider(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -44,12 +43,10 @@ class _WhoUsesFlutterState extends State<WhoUsesFlutter> {
                         link: 'https://flutter.dev/showcase'),
                     Bullet('It\'s All Widgets',
                         link: 'https://itsallwidgets.com'),
-                    Bullet('Google'),
-                    Bullet('Google Assisant, Stadia', level: 1),
-                    Bullet('Tencent'),
-                    Bullet('英语君、Now 直播、翻译君、企鹅辅导', level: 1),
-                    Bullet('Alibaba'),
-                    Bullet('闲鱼', level: 1),
+                    Bullet('Google: Google Assisant, Stadia'),
+                    Bullet('Levono Smart Clock'),
+                    Bullet('Tencent: 英语君、Now 直播、翻译君、企鹅辅导'),
+                    Bullet('Alibaba: 闲鱼'),
                     Bullet('KKBOX (my previous job)'),
                   ],
                 ),

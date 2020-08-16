@@ -10,7 +10,6 @@ class FlutterPatterns extends StatelessWidget {
       child: Column(
         children: <Widget>[
           H2('Design Patterns in Flutter'),
-          Divider(),
           Bullet('Singleton - Place widget in top of the widget tree instead'),
           Bullet('Observers'),
           Bullet('Lower widgets are all effected by higher widgets', level: 1),

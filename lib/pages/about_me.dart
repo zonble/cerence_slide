@@ -10,7 +10,6 @@ class AboutMePage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           H2('Who Am I'),
-          Divider(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
