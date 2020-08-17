@@ -29,7 +29,8 @@ flutter:
     - images/widgets.png
     - images/widget_debug.png
     - images/provider_tree.png
-
+    - images/new_project.png
+    - images/google_home_hub.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

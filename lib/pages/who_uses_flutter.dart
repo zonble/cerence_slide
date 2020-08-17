@@ -14,10 +14,12 @@ class _WhoUsesFlutterState extends State<WhoUsesFlutter> {
     initialVideoId: 'DVGIBU109nI',
     params: YoutubePlayerParams(
 //      playlist: ['DVGIBU109nI', 'jtYk3gWRSw0'], // Defining custom playlist
-      playlist: ['jtYk3gWRSw0'], // Defining custom playlist
-      startAt: Duration(seconds: 30),
+      playlist: ['jtYk3gWRSw0'],
+      // Defining custom playlist
+      startAt: Duration(seconds: 0),
       showControls: true,
       showFullscreenButton: true,
+      autoPlay: false,
     ),
   );
 
@@ -30,37 +32,47 @@ class _WhoUsesFlutterState extends State<WhoUsesFlutter> {
   @override
   Widget build(BuildContext context) {
     return SimplePage(
-      child: Column(
-        children: <Widget>[
-          H2('Who Uses Flutter?'),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Expanded(
-                child: Column(
-                  children: <Widget>[
-                    Bullet('Flutter showcase',
-                        link: 'https://flutter.dev/showcase'),
-                    Bullet('It\'s All Widgets',
-                        link: 'https://itsallwidgets.com'),
-                    Bullet('Google: Google Assisant, Stadia'),
-                    Bullet('Levono Smart Clock'),
-                    Bullet('Tencent: 英语君、Now 直播、翻译君、企鹅辅导'),
-                    Bullet('Alibaba: 闲鱼'),
-                    Bullet('KKBOX (my previous job)'),
-                  ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            H2('Who Uses Flutter?'),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expanded(
+                  child: Column(
+                    children: <Widget>[
+                      Bullet('Flutter showcase',
+                          link: 'https://flutter.dev/showcase'),
+                      Bullet('It\'s All Widgets',
+                          link: 'https://itsallwidgets.com'),
+                      Bullet('Google: Google Home Hub, Stadia'),
+                      Bullet('Levono Smart Clock'),
+                      Bullet('Tencent: 英语君、Now 直播、翻译君、企鹅辅导'),
+                      Bullet('Alibaba: 闲鱼'),
+                      Bullet('KKBOX (my previous job)'),
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(width: 30),
-              Expanded(
-                child: YoutubePlayerIFrame(
-                  controller: _controller,
-                  aspectRatio: 16 / 9,
-                ),
-              )
-            ],
-          ),
-        ],
+                SizedBox(width: 30),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Image.asset('images/google_home_hub.png'),
+                      ),
+                      SizedBox(height: 20),
+                      YoutubePlayerIFrame(
+                          controller: _controller, aspectRatio: 16 / 9),
+                      SizedBox(height: 20),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

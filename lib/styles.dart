@@ -13,7 +13,7 @@ class H2 extends StatelessWidget {
       header: true,
       child: Container(
           width: double.infinity,
-          padding: EdgeInsets.only(top: 30, bottom: 20),
+          padding: EdgeInsets.only(top: 20, bottom: 20),
           child: Text(this.text,
               style: TextStyle(
                 fontSize: 66,
@@ -38,7 +38,6 @@ class Bullet extends StatelessWidget {
       header: true,
       child: Container(
           padding: EdgeInsets.only(bottom: 16),
-//          width: double.infinity,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -52,10 +51,11 @@ class Bullet extends StatelessWidget {
     );
   }
 
-  Widget buildLink() => FlatButton(
-        padding: EdgeInsets.all(0),
-        onPressed: () => launch(this.link),
-        child: buildText(color: Colors.cyan),
+  Widget buildLink() => Flexible(
+        child: InkWell(
+          onTap: () => launch(this.link),
+          child: buildText(color: Colors.cyan),
+        ),
       );
 
   Widget buildText({Color color}) => Flexible(

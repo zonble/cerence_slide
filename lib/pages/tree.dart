@@ -79,6 +79,10 @@ class _TreePageState extends State<TreePage>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text(
+              'In my interview, I showed this to George.',
+              style: TextStyle(fontSize: 20),
+            ),
             AnimatedBuilder(
                 animation: controller,
                 builder: (context, snapshot) => TurtleView(

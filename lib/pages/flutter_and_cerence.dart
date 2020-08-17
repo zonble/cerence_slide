@@ -11,8 +11,8 @@ class FlutterAndCerence extends StatelessWidget {
         children: <Widget>[
           H2('Flutter and Cerence'),
           Bullet('Flutter is much about GUI'),
-          Bullet('It does not help our T-BOX products'),
-          Bullet('ARK SDK cliets may use Flutter to build apps'),
+          Bullet('Build Google Home Hub like products?'),
+          Bullet('ARK SDK clients may use Flutter to build apps'),
           Bullet('People are making Flutter plugins for voice services'),
           Bullet('百度语音识别 (第三方)',
               level: 1,
