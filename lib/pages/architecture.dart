@@ -12,17 +12,35 @@ class Architecture extends StatelessWidget {
         children: <Widget>[
           H2('Architecture'),
           Divider(),
-          Bullet('Like Flash for 21st Century'),
-          Bullet('Flutter was born from Web technologies'),
-          Bullet('It\'s like a simplified web browser'),
-          Bullet('Renderer: Skia, as Chrome', level: 1),
-          Bullet('Replace JavaScript with Dart', level: 1),
-          Bullet('Replace DOM with Widgets', level: 1),
-          Bullet('From the view of platform developers'),
-          Bullet('Flutter runs in an activity on Android', level: 1),
-          Bullet('Flutter runs in a view controller on iOS', level: 1),
-          Bullet('Flutter rendered in canvas on web', level: 1),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Expanded(child: buildColumn(context)),
+              SizedBox(width: 20),
+              Expanded(child: Image.asset('images/arch.png')),
+            ],
+          ),
         ],
+      ),
+    );
+  }
+
+  Widget buildColumn(context) {
+    return Container(
+      height: MediaQuery.of(context).size.height - 250,
+      child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Bullet('It\'s like a simplified web browser'),
+            Bullet('Renderer: Skia, as Chrome', level: 1),
+            Bullet('Replace JavaScript with Dart', level: 1),
+            Bullet('Replace DOM with Widgets', level: 1),
+            Bullet('As a platform developer'),
+            Bullet('Flutter runs in an activity on Android', level: 1),
+            Bullet('Flutter runs in a view controller on iOS', level: 1),
+            Bullet('Flutter rendered in canvas on web', level: 1),
+          ],
+        ),
       ),
     );
   }

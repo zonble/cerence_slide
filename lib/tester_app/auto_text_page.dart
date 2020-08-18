@@ -74,31 +74,33 @@ class _AutoTextPageState extends State<AutoTextPage> {
           );
         },
       ),
-      body: ListView.builder(
-          itemBuilder: (_, index) {
-            var line = utterances[index].string;
-            return BlocBuilder<TtsBloc, TtsBlocState>(
-                builder: (context, state) {
-              var isSelected = () {
-                if (state is TtsPlayingState) return state.index == index;
-                if (state is TtsPausedState) return state.index == index;
-                return false;
-              }();
+      body: Scrollbar(
+        child: ListView.builder(
+            itemBuilder: (_, index) {
+              var line = utterances[index].string;
+              return BlocBuilder<TtsBloc, TtsBlocState>(
+                  builder: (context, state) {
+                var isSelected = () {
+                  if (state is TtsPlayingState) return state.index == index;
+                  if (state is TtsPausedState) return state.index == index;
+                  return false;
+                }();
 
-              return Container(
-                color: isSelected ? Colors.yellow : null,
-                child: ListTile(
-                  onTap: () => bloc.add(TtsStartEvent(
-                      TtsScript(utterances: utterances, initialIndex: index))),
-                  title: Text(line),
-                  leading: isSelected
-                      ? Icon(Icons.play_arrow)
-                      : Container(width: 30),
-                ),
-              );
-            });
-          },
-          itemCount: utterances.length),
+                return Container(
+                  color: isSelected ? Colors.yellow : null,
+                  child: ListTile(
+                    onTap: () => bloc.add(TtsStartEvent(TtsScript(
+                        utterances: utterances, initialIndex: index))),
+                    title: Text(line),
+                    leading: isSelected
+                        ? Icon(Icons.play_arrow)
+                        : Container(width: 30),
+                  ),
+                );
+              });
+            },
+            itemCount: utterances.length),
+      ),
     );
   }
 }

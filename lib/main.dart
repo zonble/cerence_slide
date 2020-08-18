@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'pages/about_me.dart';
 import 'pages/architecture.dart';
 import 'pages/dart_language.dart';
+import 'pages/dart_syntax.dart';
 import 'pages/first_glance.dart';
 import 'pages/state_management.dart';
 import 'pages/who_uses_flutter.dart';
@@ -48,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           FlutterAndCerence(),
           Architecture(),
           DartLanguage(),
+          DartSyntax(),
           WidgetTree(),
           StateManagement(),
           FlutterPatterns(),
