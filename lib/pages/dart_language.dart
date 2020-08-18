@@ -1,7 +1,7 @@
-import 'package:cerence_slide/pages/page.dart';
 import 'package:flutter/material.dart';
 
 import '../styles.dart';
+import 'page.dart';
 
 class DartLanguage extends StatelessWidget {
   @override
@@ -10,7 +10,6 @@ class DartLanguage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           H2('Dart Language 🎯 '),
-          Divider(),
           Bullet('Common purpose object oriented programming language'),
           Bullet('Was designed to be compiled to JavaScript'),
           Bullet('Has its own VM nowadays'),

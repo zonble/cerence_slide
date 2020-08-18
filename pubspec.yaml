@@ -15,6 +15,8 @@ dependencies:
   bloc: 6.0.1
   flutter_bloc: 6.0.1
   flutter_syntax_view: ^1.0.0
+  flutter_turtle: ^0.3.4
+  youtube_player_iframe: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -25,6 +27,11 @@ flutter:
   assets:
     - images/zonble.png
     - images/arch.png
+    - images/widgets.png
+    - images/widget_debug.png
+    - images/provider_tree.png
+    - images/new_project.png
+    - images/google_home_hub.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

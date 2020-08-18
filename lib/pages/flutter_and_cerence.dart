@@ -1,7 +1,7 @@
-import 'package:cerence_slide/pages/page.dart';
 import 'package:flutter/material.dart';
 
 import '../styles.dart';
+import 'page.dart';
 
 class FlutterAndCerence extends StatelessWidget {
   @override
@@ -10,10 +10,9 @@ class FlutterAndCerence extends StatelessWidget {
       child: Column(
         children: <Widget>[
           H2('Flutter and Cerence'),
-          Divider(),
           Bullet('Flutter is much about GUI'),
-          Bullet('It does not help our T-BOX products'),
-          Bullet('ARK SDK cliets may use Flutter to build apps'),
+          Bullet('Build Google Home Hub like products?'),
+          Bullet('ARK SDK clients may use Flutter to build apps'),
           Bullet('People are making Flutter plugins for voice services'),
           Bullet('百度语音识别 (第三方)',
               level: 1,

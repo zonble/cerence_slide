@@ -12,7 +12,6 @@ class WhyIAmHere extends StatelessWidget {
       child: Column(
         children: <Widget>[
           H2('Why I Am Here?'),
-          Divider(),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
