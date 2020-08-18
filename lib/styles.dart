@@ -25,7 +25,6 @@ class H1 extends StatelessWidget {
   }
 }
 
-
 class H2 extends StatelessWidget {
   final String text;
 
@@ -69,24 +68,23 @@ class Bullet extends StatelessWidget {
                 padding: EdgeInsets.only(left: 12.0 + level * 30, right: 12.0),
                 child: Text('-', style: TextStyle(fontSize: 34)),
               ),
-              link != null ? buildLink() : buildText(),
+              Flexible(
+                child: link != null ? buildLink() : buildText(),
+              ),
             ],
           )),
     );
   }
 
-  Widget buildLink() => Flexible(
-        child: InkWell(
-          onTap: () => launch(this.link),
-          child: buildText(color: Colors.cyan),
-        ),
+  Widget buildLink() => FlatButton(
+        onPressed: () => launch(this.link),
+        child: buildText(color: Colors.cyan),
       );
 
-  Widget buildText({Color color}) => Flexible(
-      child: Text(this.text,
-          style: TextStyle(
-              fontSize: 34,
-              fontFamily: 'Helvetica Neue',
-              fontWeight: FontWeight.w300,
-              color: color)));
+  Widget buildText({Color color}) => Text(this.text,
+      style: TextStyle(
+          fontSize: 34,
+          fontFamily: 'Helvetica Neue',
+          fontWeight: FontWeight.w300,
+          color: color));
 }

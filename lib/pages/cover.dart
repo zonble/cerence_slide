@@ -11,7 +11,8 @@ class Cover extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           H1('Introduction to Flutter'),
-          Text('Weizhong Yang', style: TextStyle(fontSize: 32)),
+          Bullet('Weizhong Yang'),
+          Bullet('Slide Link', link: 'https://zonble.net/cerence_flutter'),
           Spacer(),
           Image.asset('images/banner.png'),
           Spacer(),

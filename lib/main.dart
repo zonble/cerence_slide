@@ -14,6 +14,7 @@ import 'pages/flutter_package_types.dart';
 import 'pages/flutter_patterns.dart';
 import 'pages/getting_started.dart';
 import 'pages/getting_started_editor.dart';
+import 'pages/live_coding.dart';
 import 'pages/provider_tree.dart';
 import 'pages/state_management.dart';
 import 'pages/tree.dart';
@@ -106,6 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 GettingStartedEditor(),
                 NewProject(),
                 FlutterPackageTypes(),
+                LiveCoding(),
               ],
             ),
             SafeArea(
