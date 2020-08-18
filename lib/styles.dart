@@ -2,6 +2,30 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+class H1 extends StatelessWidget {
+  final String text;
+
+  H1(this.text, {Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Semantics(
+      header: true,
+      child: Container(
+          width: double.infinity,
+          padding: EdgeInsets.only(top: 20, bottom: 20),
+          child: Text(this.text,
+              style: TextStyle(
+                fontSize: 80,
+                color: Color(0xFF00B4BE),
+                fontWeight: FontWeight.w200,
+                fontFamily: 'Helvetica Neue',
+              ))),
+    );
+  }
+}
+
+
 class H2 extends StatelessWidget {
   final String text;
 

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'pages/NewFlutterProject.dart';
 import 'pages/about_me.dart';
 import 'pages/architecture.dart';
+import 'pages/cover.dart';
 import 'pages/dart_language.dart';
 import 'pages/dart_syntax.dart';
 import 'pages/first_glance.dart';
@@ -85,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
             PageView(
               controller: _pageController,
               children: <Widget>[
+                Cover(),
                 AboutMePage(),
                 WhyIAmHere(),
                 TreePage(),
@@ -107,20 +109,22 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             SafeArea(
-              child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      IconButton(
-                          icon: Icon(Icons.arrow_left, color: Colors.grey),
-                          onPressed: previousPage),
-                      PageNumber(key: _key, page: _page),
-                      IconButton(
-                          icon: Icon(Icons.arrow_right, color: Colors.grey),
-                          onPressed: nextPage),
-                    ],
-                  )),
+              child: Center(
+                child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        IconButton(
+                            icon: Icon(Icons.arrow_left, color: Colors.grey),
+                            onPressed: previousPage),
+                        PageNumber(key: _key, page: _page),
+                        IconButton(
+                            icon: Icon(Icons.arrow_right, color: Colors.grey),
+                            onPressed: nextPage),
+                      ],
+                    )),
+              ),
             ),
           ],
         ),

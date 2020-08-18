@@ -25,6 +25,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - images/banner.png
+    - images/logo.png
     - images/zonble.png
     - images/arch.png
     - images/widgets.png
