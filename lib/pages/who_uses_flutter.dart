@@ -13,9 +13,7 @@ class _WhoUsesFlutterState extends State<WhoUsesFlutter> {
   YoutubePlayerController _controller = YoutubePlayerController(
     initialVideoId: 'DVGIBU109nI',
     params: YoutubePlayerParams(
-//      playlist: ['DVGIBU109nI', 'jtYk3gWRSw0'], // Defining custom playlist
       playlist: ['jtYk3gWRSw0'],
-      // Defining custom playlist
       startAt: Duration(seconds: 0),
       showControls: true,
       showFullscreenButton: true,
