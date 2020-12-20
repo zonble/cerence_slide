@@ -5,9 +5,8 @@ import 'page.dart';
 
 class StateManagement extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return SimplePage(
-      child: Column(children: <Widget>[
+  Widget build(BuildContext context) => SimplePage(
+          child: Column(children: <Widget>[
         H2('State Management'),
         Bullet('Patterns and Packages'),
         Bullet('Redux', level: 1),
@@ -18,7 +17,5 @@ class StateManagement extends StatelessWidget {
         Bullet('Dart has classes', level: 1),
         Bullet('Sub-widget can look up for super widget in specific class',
             level: 1),
-      ]),
-    );
-  }
+      ]));
 }

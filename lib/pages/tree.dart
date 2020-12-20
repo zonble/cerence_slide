@@ -75,33 +75,29 @@ class _TreePageState extends State<TreePage>
     ];
 
     return SimplePage(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'In my interview, I showed this to George.',
-              style: TextStyle(fontSize: 20),
-            ),
-            AnimatedBuilder(
-                animation: controller,
-                builder: (context, snapshot) => TurtleView(
-                    commands: commands,
-                    child: Container(
-                      height: MediaQuery.of(context).size.height - 200,
-                    ))),
-            Container(
+        child: Center(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+          Text(
+            'In my interview, I showed this to George.',
+            style: TextStyle(fontSize: 20),
+          ),
+          AnimatedBuilder(
+              animation: controller,
+              builder: (context, snapshot) => TurtleView(
+                  commands: commands,
+                  child: Container(
+                    height: MediaQuery.of(context).size.height - 200,
+                  ))),
+          Container(
               width: 300,
               child: Slider(
                 min: 10.0,
                 max: 250.0,
                 value: _value,
                 onChanged: (value) => setState(() => _value = value),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+              ))
+        ])));
   }
 }

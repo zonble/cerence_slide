@@ -6,12 +6,6 @@ class SimplePage extends StatelessWidget {
   SimplePage({Key key, this.child}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(30.0),
-        child: child,
-      ),
-    );
-  }
+  Widget build(BuildContext context) => SafeArea(
+      child: Padding(padding: const EdgeInsets.all(30.0), child: child));
 }

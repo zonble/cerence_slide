@@ -5,9 +5,8 @@ import 'page.dart';
 
 class WidgetTree extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return SimplePage(
-      child: Column(
+  Widget build(BuildContext context) => SimplePage(
+          child: Column(
         children: <Widget>[
           H2('Everything is a Widget in A Tree'),
           Bullet('UI = f(State)'),
@@ -20,7 +19,5 @@ class WidgetTree extends StatelessWidget {
           Bullet(
               'Flutter uses an algorithm to prevent performance issue on rebuilding the tree'),
         ],
-      ),
-    );
-  }
+      ));
 }
