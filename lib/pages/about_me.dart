@@ -32,7 +32,7 @@ class AboutMePage extends StatelessWidget {
 
   List<Widget> buildContent() => [
         Bullet('Weizhong Yang '),
-        Bullet('weizhong.yang@cernece.com'),
+        Bullet('weizhong.yang@cerence.com'),
         Bullet('👨🏻‍💻 iOS Developer at Taipei'),
         Bullet('Working on Project 168'),
         Bullet('iOS dev for 12 years. '
